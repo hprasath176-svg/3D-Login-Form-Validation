@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#login-container{
+    background-color: black;
+    box-shadow: 5px 5px 5px black,
+                -5px -5px 5px black;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 50px;
+    position: relative;
+    min-height: 70vh;
+    perspective: 1000px;
+}
+#box{
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+    padding: 50px;
+    flex-wrap: nowrap;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: .2s ease;
+    z-index: 10;
+}
+#form{
+    position: relative;
+    z-index: 5;
+}
+#form h1{
+    text-align: center;
+    padding-bottom: 30px;
+    color: #FC00FF;
+    display: flex;
+    font-size: 2rem !important;
+    font-weight: bold !important;
+}
+.input-group{
+    position: relative;
+    z-index: 3;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.input-group label{
+    color: white;
+    padding-bottom: 30px;
+    margin-top: 30px;
+}
+.input-group input{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 40px; 
+    display: flex;
+    background-color: transparent;
+    border-bottom: 2px solid white;
+    border: none;
+    z-index: 5;
+}
+.input-group input::placeholder{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.input-group.success input{
+    border-bottom: 2px solid #2ecc71;
+}
+
+.input-group.error input{
+    border-bottom: 2px solid red;
+}
+.input-group input:focus{
+    border: 2px solid gray;
+}
+.input-group small{
+    color: red ;
+    visibility: hidden;
+}
+.input-group.error small{
+    color: red;
+    visibility: visible;
+}
+button{
+    width: 100%;
+    height: 30px;
+    background-color: #FC00FF;
+    color: white;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    z-index: 5;
+}
+.input-group i:first-of-type{
+  position: absolute;
+    right: 20px;
+    top: 55px;
+    color: black;
+    visibility: hidden;
+}
+.input-group i:last-of-type{
+    position: absolute;
+    right: 20px;
+    top: 55px;
+    color: black;
+    visibility: hidden;
+}
+.input-group.success i:first-of-type{
+    color: #2ecc71;
+    visibility: visible;
+}
+.input-group.error i:last-of-type{
+    color: red;
+    visibility: visible;
+}
+img{
+    width: 15rem;
+    height: 15rem;
+    position: absolute;
+    top: 90px;
+    right: -190px;   
+}
+.path{
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00dede 0%, #FC00FF 100%);
+    clip-path: circle(350px at right 150px );
+    z-index: 0;
+}
+.path1{
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #00dede 0%, #FC00FF 100%);
+    clip-path: circle(350px at left 600px );
+    z-index: 0;
+}
